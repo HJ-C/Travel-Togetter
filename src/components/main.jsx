@@ -1,4 +1,3 @@
-import '../css/main.css'
 import start from '../js/slider'
 import Typing from '../js/typing'
 import AOS from 'aos'

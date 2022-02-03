@@ -1,3 +1,4 @@
+import '../css/main.css'
 import React from "react"
 import {Link, Route, Switch} from 'react-router-dom'
 
@@ -34,19 +35,19 @@ function Menu() {
 
       <ul className="main-menu">
         <li className="item">
-          <a href="./accommodation.html">
+          <Link to="./accommodation.html">
             <div className="item__name">숙소</div>
-          </a>
+          </Link>
         </li>
         <li className="item">
-          <a href="./review.html">
+          <Link to="/review">
             <div className="item__name">갤러리</div>
-          </a>
+          </Link>
         </li>
         <li className="item">
-          <a href="Travel.html">
+          <Link to="Travel.html">
             <div className="item__name">여행</div>
-          </a>
+          </Link>
         </li>
         <li className="item">
           <div className="item__name">소개</div>

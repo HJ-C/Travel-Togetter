@@ -22,11 +22,10 @@ function start(){
     
                 propSlider.slider.style.transition = 'unset';
                 propSlider.slider.style.marginLeft = 0;
-            }, 1000);
+            }, 3000);
         }
     }
     setSlide.init()
     }
-    start()
 
     export default start
