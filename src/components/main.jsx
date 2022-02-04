@@ -1,5 +1,6 @@
 import start from '../js/slider'
 import Typing from '../js/typing'
+import '../css/main.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import {useEffect} from 'react'

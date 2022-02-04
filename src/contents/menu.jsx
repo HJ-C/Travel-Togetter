@@ -35,7 +35,7 @@ function Menu() {
 
       <ul className="main-menu">
         <li className="item">
-          <Link to="./accommodation.html">
+          <Link to="./accommodation">
             <div className="item__name">숙소</div>
           </Link>
         </li>
