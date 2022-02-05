@@ -2,11 +2,13 @@ import Menu from "../contents/menu"
 import Footer from "../contents/footer"
 import '../css/review.css'
 import rvData from '../data/review.js'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import {Link} from 'react-router-dom'
+
 
 function Review() {
 
+        
 let [rv, setRv] = useState(rvData)
 
 return (
@@ -37,11 +39,9 @@ return (
         </div>
 
 
-        {/*
-        <!--FOOTER--> */}
+        {/* FOOTER */}
         <Footer></Footer>
-        {/*
-        <!--FOOTER end--> */}
+        {/* FOOTER end */}
 
     </div>
     

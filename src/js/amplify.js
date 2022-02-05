@@ -2,7 +2,7 @@ function Amplify() {
     window.onload = function () {
         const data = {
           img: [
-            {a: '../assets/amplify/l-img.jpg', s: '../assets/amplify/s-img.jpg'},
+            {a: '../assets/travel/l-img.jpg', s: '../assets/travel/s-img.jpg'},
           ]
         };
         const magnifyId = 0
