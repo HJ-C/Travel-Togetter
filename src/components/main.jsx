@@ -5,6 +5,7 @@ import 'aos/dist/aos.css'
 import {useEffect} from 'react'
 import Menu from '../contents/menu'
 import Footer from '../contents/footer'
+import '../css/main.css'
 
 
 function Main() {

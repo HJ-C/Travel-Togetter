@@ -209,12 +209,15 @@ header .main-menu .item .item__name {
     font-size: 50px;
     padding-bottom: 40px;
 
+    
 }
 
 .blog .container .boxs {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 25px;
+    box-shadow:
+
 }
 
 .blog .container .boxs .box {
@@ -223,6 +226,9 @@ header .main-menu .item .item__name {
     border-radius: 5px;
     padding: 20px;
     position: relative;
+    box-shadow:
+    0 5px 10px 0px rgba(0, 0, 0, .1),
+    0 2px 5px 0 rgba(0, 0, 0, .3);
 }
 
 .blog .container .boxs .box .image {

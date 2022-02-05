@@ -3,6 +3,7 @@ import Main from './components/main';
 import Review from './components/review';
 import {Link, Route, Switch} from 'react-router-dom'
 import Accommodation from './components/accommodation';
+import Travel from './components/travel';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         </Route>
         <Route path="/accommodation">
           <Accommodation></Accommodation>
+        </Route>
+        <Route path="/travel">
+          <Travel></Travel>
         </Route>
         <Route path='/:id'> 
           <div>잘못된 주소입니다.</div>

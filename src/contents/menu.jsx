@@ -45,7 +45,7 @@ function Menu() {
           </Link>
         </li>
         <li className="item">
-          <Link to="Travel.html">
+          <Link to="./travel">
             <div className="item__name">여행</div>
           </Link>
         </li>
