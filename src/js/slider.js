@@ -1,5 +1,6 @@
 function start(){
 
+    // Dom 선택
     let propSlider = {
         slider: document.getElementById('slider')
     }
@@ -7,6 +8,7 @@ function start(){
     
     // Slider
     let setSlide = {
+    
         init: function () {
             setInterval(setSlide.moveSlide, 3000);
         },
@@ -22,10 +24,10 @@ function start(){
     
                 propSlider.slider.style.transition = 'unset';
                 propSlider.slider.style.marginLeft = 0;
-            }, 3000);
+            }, 1000);
         }
     }
     setSlide.init()
     }
-
+    // start()
     export default start

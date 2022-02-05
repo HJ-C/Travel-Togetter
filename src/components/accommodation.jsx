@@ -2,8 +2,12 @@ import { useEffect, useState } from "react"
 import Menu from "../contents/menu"
 import '../css/accommodation.css'
 import Taps from "../js/taps"
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 // import Footer from "../contents/footer"
-import price from "../data/price"
+import hotelPrice from "../data/hotelPrice"
+import resortPrice from "../data/resortPrice"
+
 
 function Accommodation() {
 
@@ -11,7 +15,14 @@ useEffect( ()=> {
 Taps()
 },[])
 
-let [hotel, setHotel] = useState(price)
+useEffect(() => {
+	AOS.init({
+			duration : 1000
+	});
+});
+
+let [room, setRoom] = useState(hotelPrice)
+let [room1, setRoom1] = useState(resortPrice)
 
 return (
 <>
@@ -49,145 +60,167 @@ return (
 
 						<div id="menu__text" className="text">
 							<div id="postres">
-							<div class="item">
-                  <div class="title sub">
-                    <h3>호텔 카푸치노</h3>
-                    <p>9호선 신논현역과 언주역 사이에 위치한 강남빌딩 숲 사이에...</p>
-                  </div>
-                  <div class="price">
-                    <p class="precio">77,000~</p>
-                  </div>
-                </div>
-
-                <div class="item">
-                  <div class="title sub">
-                    <h3>신라스테이 역삼</h3>
-                    <p>합리적인 가격에 신라호텔의 가치를 경험할 수 있는 호텔이다.</p>
-                  </div>
-                  <div class="price">
-                    <p class="precio">80,500~</p>
-                  </div>
-                </div>
-
-                <div class="item">
-                  <div class="title sub">
-                    <h3>파인 아트 라벨</h3>
-                    <p>전객실 오션뷰 전망으로 아름다운 안목해변의 전경을 객실에서 감상하실수 있으며, 강릉의 명소인 안목커피거리가 5분거리에 위치하고 있어 강릉의 로컬을 느낄 수 있다.</p>
-                  </div>
-                  <div class="price">
-                    <p class="precio">160,000~</p>
-                  </div>
-                </div>
-
-                <div class="item">
-                  <div class="title sub">
-                    <h3>오션투유리조트 설악비치호텔</h3>
-                    <p>삼포해수욕장 도보 5분 거리에 위치해 바다를 즐기기 좋으며, 넓은 마당에서 야외 바베큐 가능</p>
-                  </div>
-                  <div class="price">
-                    <p class="precio">149.900~</p>
-                  </div>
-                </div>
-
-                <div class="item">
-                  <div class="title sub">
-                    <h3>그랜드 인투라온 호텔 정선</h3>
-                    <p>산속에 위치하여 자연의 아름다움을 조망하며 편안하고 쾌적한 휴식을 할 수 있는 호텔입니다. 모던하고 깔끔한 디자인의 외관과 청결하고 깔끔한 객실이 준비되어 있다.</p>
-                  </div>
-                  <div class="price">
-                    <p class="precio">159,900~</p>
-                  </div>
-                </div>
-
-                <div class="item">
-                  <div class="title sub">
-                    <h3>에어스카이 호텔</h3>
-                    <p>수려한 녹음, 푸른 하늘과 드넓은 바다가 숨쉬는 곳, 푸른 인천 바다와 맞닿은 편안한 호텔이다.</p>
-                  </div>
-                  <div class="price">
-                    <p>90,000~</p>
-                  </div>
-                </div>
+								{
+								room.map( (a,i) => <Hotel room={room} i={i}></Hotel> )
+								}
 							</div>
 
 							<div id="cafes">
-								<div className="item">
-									<div className="title sub">
-										<h3>베어스타운 리조트</h3>
-										<p>국내레저업계 최초 ISO 인증과 고객을 위한 품질 및 서비스 중심의 리조트입니다</p>
-									</div>
-									<div className="price">
-										<p className="precio">189,000~</p>
-									</div>
-								</div>
-
-								<div className="item">
-									<div className="title sub">
-										<h3>소노휴 양평</h3>
-										<p>남한 강변을 따라 드라이브하기에 알맞은 곳으로 서울에서 불과 30분 거리에 있는 가벼운 여행지 입니다.</p>
-									</div>
-									<div className="price">
-										<p className="precio">223,000~</p>
-									</div>
-								</div>
-
-								<div className="item">
-									<div className="title sub">
-										<h3>한화리조트 용인 베잔송</h3>
-										<p>서울에서 1시간 반이면 도착할 수 있는 편리한 접근성이 강점인 리조트입니다.</p>
-									</div>
-									<div className="price">
-										<p className="precio">202,000~</p>
-									</div>
-								</div>
-
-								<div className="item">
-									<div className="title sub">
-										<h3>썬밸리호텔 여주</h3>
-										<p>남한강이 흐르는 대자연 속에 위치한 모던하면서 예술적 감각이 넘치는 호텔입니다. 호텔 내 레스토랑, 워터파크, 실내골프연습장 등 다양한
-											편의시설을 갖추고 있습니다.</p>
-									</div>
-									<div className="price">
-										<p className="precio">150,000~</p>
-									</div>
-								</div>
-
-								<div className="item">
-									<div className="title sub">
-										<h3>랜딩관 제주신화월드 리조트</h3>
-										<p>신화테마파크와 신화워터파크 바로 옆에 위치하여 제주신화월드의 모든 부대시설을 이용하기에 매우 편리한 접근성을 가지고 있습니다. </p>
-									</div>
-									<div className="price">
-										<p className="precio">308,000~</p>
-									</div>
-								</div>
-
-								<div className="item">
-									<div className="title sub">
-										<h3>제주 아모렉스 리조트</h3>
-										<p>공항과 인접한 호텔로 바다 바로 앞에 위치해 저녁에 산책하기 좋은 호텔입니다.</p>
-									</div>
-									<div className="price">
-										<p className="precio">45,000~</p>
-									</div>
-								</div>
-
+								{
+								room.map( (a,i) => <Resort room1={room1} i={i}></Resort> )
+								}
 							</div>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</section>
 	</div>
 	{/* Price end */}
 
+	{/* <!-- items --> */}
 
+<div class="sub-title1">
+	<div class="text">
+		<h2>REVIEW</h2>
+	</div>
+</div>
+<section class="item-section">
+	<div class="product">
+		<div class="items__list">
+
+			<div class="items">
+
+				<div class="item" data-aos="zoom-in" data-aos-duration="800">
+					<div class="item-img">
+						<img src="/assets/accommodation/rv-1.jpg"/>
+					</div>
+					<div class="item-text">
+						<h3>호텔 카푸치노</h3>
+						<p>호텔카푸치노는 반려견과가기에 너무좋은 숙소입니다.
+							그냥 반려동반가능이 아니라 히노끼탕대여가능 계단포함 밥그릇및식기 포함 무엇보다 1층에서는 강아지용 라떼도 판매중이셧어요. 그리고 마음에들었던 것은 도보2분안에 아주작은 공원이 있는데 반려견이 잠시 배변을 할수있어서 엄청좋았어요.</p>
+					</div>
+				</div>
+
+				<div class="item" data-aos="zoom-in" data-aos-duration="800">
+					<div class="item-img">
+						<img src="/assets/accommodation/rv-2.jpg"/>
+					</div>
+					<div class="item-text">
+						<h3>파인 아트 라벨</h3>
+						<p>1. 가격대비 뷰가 좋음
+							2. 해변가랑 가까움
+							3. 안목커피거리 가까움
+							4. 로비가 정말 이쁨
+							5. 객실내 보일러 가동 중이라서 바닥이 따뜻함
+							6. 24시간 편의점
+							</p>
+					</div>
+				</div>
+
+				<div class="item" data-aos="zoom-in" data-aos-duration="800">
+					<div class="item-img">
+						<img src="/assets/accommodation/rv-3.jpg"/>
+					</div>
+					<div class="item-text">
+						<h3>에어스카이 호텔</h3>
+						<p>평일 숙박이라 그런지 고층으로 배정받아서 좋았습니다. 밤 12시 넘어서 체크인 했는데도 큰 불편 없었고 객실 내부는 넓진 않아도 깔끔했습니다.
+							주차는 늦게가서 그런지 만차였지만 근처에 차 댈 곳은 많아서 크게 상관 없었습니다.
+							건물 내부 편의점이 큰편이라 좋았고 음식 종류가 엄청 많았습니다.</p>
+					</div>
+				</div>
+
+				<div class="item" data-aos="zoom-in" data-aos-duration="800">
+					<div class="item-img">
+						<img src="/assets/accommodation/rv-4.jpg"/>
+					</div>
+					<div class="item-text">
+						<h3>썬밸리호텔 여주</h3>
+						<p>부족한것이나 불편함 없이 잘 쉬었습니다. 혼자 쓰기엔 충분히 넓은 공간이었습니다. 3명이 써도 괜찮을 룸이에요. 구스이불 폭신했구요 남한강과 아침일출을 침대에서 볼수 있었어요. 반대편 객실은 강위로 해지는 풍경을 감상할 수 있겠네요.</p>
+					</div>
+				</div>
+
+				<div class="item" data-aos="zoom-in" data-aos-duration="800">
+					<div class="item-img">
+						<img src="/assets/accommodation/rv-5.jpg"/>
+					</div>
+					<div class="item-text">
+						<h3>제주 아모렉스 리조트</h3>
+						<p>여름에 방문 후 재방문입니다
+							공항과 가깝고 시설도 훌륭합니다
+							가성비 좋은 숙소를 원하시면 강추합니다
+							여름에는 수영장도 운영 중이라 정말 좋았습니다
+							청소 상태도 좋으며 숙소에 cu가 있어 멀리 나가지 않아도 물건을 구매 할 수 있어 무엇보다 좋았습니다
+							숙소 앞 해안도로에서 걷다보면 멋진 석양을 만나실 수 있습니다
+							사진 맛집이라 관광객들이 많이 옵니다</p>
+					</div>
+				</div>
+
+				<div class="item" data-aos="zoom-in" data-aos-duration="800">
+					<div class="item-img">
+						<img src="/assets/accommodation/rv-6.jpg"/>
+					</div>
+					<div class="item-text">
+						<h3>소노휴 양평</h3>
+						<p>가족과 다시 한 번 가고싶은 리조트에요.
+							객실이 연식이 있지만 방온도도 숙면을 취하기 딱 좋았구요. 수압도 세서 기분좋게 샤워했네요.
+							무엇보다 불멍을 아무 준비없이 할 수 있다는점.
+							아침에도 커피와함께 단풍을 즐기며 힐링했답니다.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+	{/* <!-- items end--> */}
 
 </>
 )
 }
 
+function Hotel(props) {
+return (
+<div class="item">
+	<div class="title sub">
+		<h3>{props.room[props.i].title}</h3>
+		<p>{props.room[props.i].text}</p>
+	</div>
+	<div class="price">
+		<p class="precio">{props.room[props.i].price}</p>
+	</div>
+</div>
+)
+}
 
+function Resort(props) {
+return (
+<div class="item">
+	<div class="title sub">
+		<h3>{props.room1[props.i].title}</h3>
+		<p>{props.room1[props.i].text}</p>
+	</div>
+	<div class="price">
+		<p class="precio">{props.room1[props.i].price}</p>
+	</div>
+</div>
+)
+}
 
+function explore() {
+	return (
+		<div class="item" data-aos="zoom-in" data-aos-duration="800">
+		<div class="item-img">
+			<img src="/assets/accommodation/rv-1.jpg"/>
+		</div>
+		<div class="item-text">
+			<h3>호텔 카푸치노</h3>
+			<p>호텔카푸치노는 반려견과가기에 너무좋은 숙소입니다.
+				그냥 반려동반가능이 아니라 히노끼탕대여가능 계단포함 밥그릇및식기 포함 무엇보다 1층에서는 강아지용 라떼도 판매중이셧어요. 그리고 마음에들었던 것은 도보2분안에 아주작은 공원이 있는데 반려견이 잠시 배변을 할수있어서 엄청좋았어요.</p>
+		</div>
+	</div>
+	)
+}
 
 export default Accommodation

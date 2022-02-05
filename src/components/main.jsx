@@ -1,11 +1,11 @@
 import start from '../js/slider'
 import Typing from '../js/typing'
-import '../css/main.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import {useEffect} from 'react'
 import Menu from '../contents/menu'
 import Footer from '../contents/footer'
+
 
 function Main() {
 
@@ -26,14 +26,14 @@ function Main() {
 {/* Main Image */}
   
   <section className="home text-uppercase" onLoad={start}>
-        <div className="home-bg" style={ {backgroundImage:'url(/assets/main/bg0.jpg)'} }>
+        <div className="home-bg" style={ {backgroundImage:'url(/assets/main/bg0.jpg)'} } onLoad={Typing}>
         <div>
           <img className="img-text" src="/assets/main/bg-text.png"></img>
         </div>
         <div className="home-caption w-75 m-auto text-center">
           <h3>SEARCH YOUR NEXT DESTINATION</h3>
-          <div className="wrap" onLoad={Typing}>
-            <h1 id="dynamic" className="lg-text" >TRAVEL</h1>
+          <div className="wrap">
+            <h1 id="dynamic" className="lg-text"></h1>
           </div>
         </div>
         </div>
