@@ -1,5 +1,4 @@
 import '../css/travel.css'
-import Menu from '../contents/menu'
 import Footer from '../contents/footer'
 import { useEffect, useState } from 'react'
 import AOS from 'aos'
@@ -24,7 +23,6 @@ let [imgs, setImgs] = useState(imgLink)
 return(
 <>
 	<div id="bg" style={{backgroundImage:"url('/assets/bg-blog-image.jpg')"}}>
-		<Menu></Menu>
 
 		{/* Main-img & Title*/}
 		<section class="about-us" data-aos="fade-right" data-aos-duration="1000">

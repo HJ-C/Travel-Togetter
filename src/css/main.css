@@ -270,6 +270,7 @@ header .main-menu .item .item__name {
 .gallery .wrapper {
   background-color: rgba(3, 8, 20, 0.973);
   position: relative;
+  padding-bottom: 100px;
 }
 
 .gallery .text {
@@ -315,50 +316,50 @@ header .main-menu .item .item__name {
 }
 
 /*Footer*/
-footer{
-  background-color: rgba(3, 8, 20, 0.973);
+.ftbg{
   padding: 80px 0;
+  background-color: rgba(3, 8, 20, 0.973);
 }
-footer .inner{
+footer #inner{
   padding: 40px 0 60px 0;
 }
-footer .menu{
+footer #menu{
   display: flex;
   justify-content: center;
 }
-footer .menu li{
+footer #menu li{
   position: relative;
 }
-footer .menu li::before{
+footer #menu li::before{
   content: "";
   width: 3px;
   height: 3px;
-  background-color: #555;
+  background-color: #fff;
   position: absolute; 
   top: 0;
   bottom: 0;
   margin: auto;
 }
-footer .menu li a{
-  color: #ccc;
+footer #menu li a{
+  color: #fff;
   font-size: 12px;
   font-weight: 700;
   padding: 15px;      
   display: block;
 }
-footer .menu li a.green{
+footer #menu li a.green{
   color: #669900;
 }
 
-footer .info{
+footer #info{
   margin-top: 30px;
   text-align: center;
 }
-footer .info span{
+footer #info span{
   margin-right: 20px;
-  color: #999;
+  color: #ccc;
   font-size: 12px;
 }
-footer .info span:last-child{
+footer #info span:last-child{
   margin-right: 0;
 }

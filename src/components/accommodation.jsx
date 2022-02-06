@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import Menu from "../contents/menu"
 import '../css/accommodation.css'
 import Taps from "../js/taps"
 import AOS from 'aos'
@@ -28,12 +27,6 @@ let [review, setReview] = useState(explore)
 
 return (
 <>
-	{/*
-	<!--Logo and DropDown--> */}
-	<Menu></Menu>
-	{/*
-	<!--Logo and DropDown end--> */}
-
 	{/* Background */}
 	<div className="bg" style={ {backgroundImage:'url(/assets/accommodation/bg-img.jpg)'} }>
 		

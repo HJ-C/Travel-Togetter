@@ -1,4 +1,3 @@
-import Menu from "../contents/menu"
 import Footer from "../contents/footer"
 import '../css/review.css'
 import rvData from '../data/review.js'
@@ -14,11 +13,6 @@ let [rv, setRv] = useState(rvData)
 return (
 <>
 
-    {/*
-    <!--Logo and DropDown--> */}
-    <Menu></Menu>
-    {/*
-    <!--Logo and DropDown end--> */}
 
     {/*
     <!--REVIEW & Blog--> */}

@@ -3,7 +3,6 @@ import Typing from '../js/typing'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import {useEffect} from 'react'
-import Menu from '../contents/menu'
 import Footer from '../contents/footer'
 import '../css/main.css'
 
@@ -20,9 +19,6 @@ function Main() {
   return (
     <>
 
-{/* <!--Logo and DropDown--> */}
-    <Menu></Menu>
-{/* <!--Logo and DropDown End--> */}
 
 {/* Main Image */}
   
@@ -83,25 +79,16 @@ function Main() {
       </div>
       <div className="photo-grid">
         <div className="photo" data-aos="fade-up" data-aos-duration="1000">
-          <video src="./video/video2.mp4"  width="700px" height="500px"></video>
+          <img src="/assets/main/gal-img1.jpg"  width="700px" height="500px"/>
         </div>
         <div className="photo" data-aos="fade-up" data-aos-duration="1000">
-          <img src="/assets/main/gal-img1.jpg"></img>
-        </div>
-        <div className="photo" data-aos="fade-up" data-aos-duration="1000">
-          <img src="/assets/main/gal-img2.jpg"/>
-        </div>
-        <div className="photo" data-aos="fade-up" data-aos-duration="1000">
-          <video src="./video/video1.mp4" width="700px" height="500px"></video>
+          <img src="/assets/main/gal-img2.jpg"></img>
         </div>
         <div className="photo" data-aos="fade-up" data-aos-duration="1000">
           <img src="/assets/main/gal-img3.jpg"/>
         </div>
         <div className="photo" data-aos="fade-up" data-aos-duration="1000">
-          <img src="/assets/main/gal-img4.jpg"/>
-        </div>
-        <div className="photo" data-aos="fade-up" data-aos-duration="1000">
-          <video src="./video/video2.mp4" width="700px" height="500px"></video>
+          <img src="/assets/main/gal-img4.jpg"  width="700px" height="500px"/>
         </div>
         <div className="photo" data-aos="fade-up" data-aos-duration="1000">
           <img src="/assets/main/gal-img5.jpg"/>
@@ -109,18 +96,52 @@ function Main() {
         <div className="photo" data-aos="fade-up" data-aos-duration="1000">
           <img src="/assets/main/gal-img6.jpg"/>
         </div>
+        <div className="photo" data-aos="fade-up" data-aos-duration="1000">
+          <img src="/assets/main/gal-img7.jpg"  width="700px" height="500px"/>
+        </div>
+        <div className="photo" data-aos="fade-up" data-aos-duration="1000">
+          <img src="/assets/main/gal-img8.jpg"/>
+        </div>
+        <div className="photo" data-aos="fade-up" data-aos-duration="1000">
+          <img src="/assets/main/gal-img9.jpg"/>
+        </div>
       </div>
     </div>
   </section>
 {/* <!-- Gallery end --> */}
 
 {/* <!--FOOTER--> */}
-<Footer></Footer>
+<MainFooter></MainFooter>
 {/* <!--FOOTER end--> */}
 
 
 
     </>
     )
+}
+
+
+function MainFooter() {
+  return (
+    <footer className='ftbg'>
+    <div id="inner">
+        <ul id="menu">
+        <li><a href=" " className="green">개인정보 처리방침</a></li>
+        <li><a href=" ">영상정보처리기기 운영관리 방침</a></li>
+        <li><a href=" ">홈페이지 이용약관</a></li>
+        <li><a href=" ">위치정보 이용약관</a></li>
+        <li><a href=" ">여행 약관</a></li>
+        <li><a href=" ">마케팅 제휴 문의 </a></li>
+        </ul>
+
+        <div id="info">
+        <span>사업자 등록번호 : 012-345-678</span>
+        <span>E-mail : swch56@naver.com</span>
+        <span>Phone : 010-7639-8812</span>
+        <span>Made By HJ-C</span>
+        </div>
+    </div>
+</footer>
+  )
 }
 export default Main
