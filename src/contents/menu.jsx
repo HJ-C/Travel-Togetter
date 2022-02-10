@@ -1,4 +1,7 @@
 import '../css/main.css'
+import '../css/travel.css'
+import '../css/review.css'
+import '../css/accommodation.css'
 import React from "react"
 import {Link, Route, Switch} from 'react-router-dom'
 

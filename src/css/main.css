@@ -1,4 +1,5 @@
 
+
 /*초기화*/
 * {
   margin: 0;
@@ -362,4 +363,71 @@ footer #info span{
 }
 footer #info span:last-child{
   margin-right: 0;
+}
+
+
+/* Small */
+@media(max-width: 768px) {
+
+  footer .menu li a {
+      font-size: 5px;
+  }
+  .slide__container {
+    width: 90%;
+    height: 100%;
+  }
+  .slide__container h2{
+    font-size: 100px;
+  }
+  .wrapper .text{
+    width: 20%;
+  }
+  .photo-grid{
+    width: 60%;
+    padding: 0 20px;
+  }
+}
+
+/* Medium */
+@media(max-width:992px) {
+  header .inner{
+      margin-left: -20px;
+  }
+  .home img{
+    width: 60%;
+    position: absolute;
+    right: 0px;
+    top: 150px;
+  }
+  .slide__container {
+    width: 95%;
+    height: 100%;
+  }
+  .slide__container h2{
+    font-size: 40px;
+  }
+  .wrapper .text{
+    width: 10%;
+  }
+  .photo-grid{
+    width: 80%;
+    padding: 0 20px;
+  }
+}
+
+/* Large */
+@media(max-width: 1200px) {
+  .inner {
+      width: 100%;
+  }
+  .home img{
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    top: 150px;
+  }
+
+  .photo-grid{
+    width: 100%;
+  }
 }

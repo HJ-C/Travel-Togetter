@@ -355,13 +355,6 @@ header .main-menu .item .item__name {
 
 
 /* 제목 이미지 */
-.s-img {
-    margin: -35px auto;
-    top: 46px;
-    left: 390px;
-    position: absolute;
-}
-
 .sub-title .text {
     width: 50%;
 }
@@ -434,4 +427,33 @@ footer .info span {
 
 footer .info span:last-child {
     margin-right: 0;
+}
+
+@media(max-width: 320px) {
+    .container {
+        width: 300px;
+    }    
+
+}
+/* Small */
+@media(min-width: 768px) {
+    .container {
+        width: 750px;
+    }    
+}
+
+/* Medium */
+@media(min-width:992px) {
+    .container {
+        width: 970px;
+    }
+
+}
+
+/* Large */
+@media(min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+
 }

@@ -114,7 +114,8 @@
     padding-bottom: 10px;
     border-width: 30%;
     width: 45%;
-    padding-left: 180px;
+    padding-left: 100px;
+    padding-top: 30px;
   }
 /* More */
 section.imgs {
@@ -141,3 +142,35 @@ section.imgs div.img-contents div.col img{
   margin-top: 15px;
 } 
 
+/* Small */
+@media(max-width: 768px) {
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	.about-text{
+		margin-top: 70px;
+	}
+}
+
+/* Medium */
+@media(max-width:992px) {
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	.about-text{
+		margin: 40px 70px 0 0;
+	}
+}
+
+/* Large */
+@media(max-width: 1200px) {
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	.about-text{
+		margin: 40px 160px 0 0;
+	}
+}

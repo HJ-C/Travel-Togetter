@@ -3,7 +3,7 @@ import '../css/review.css'
 import rvData from '../data/review.js'
 import { useEffect, useState } from "react"
 import {Link} from 'react-router-dom'
-
+import Menu from "../contents/menu"
 
 function Review() {
 
@@ -12,15 +12,13 @@ let [rv, setRv] = useState(rvData)
 
 return (
 <>
-
-
     {/*
     <!--REVIEW & Blog--> */}
     <div className="blog" style={ {backgroundImage : 'url(/assets/bg-blog-image.jpg)' } }>
         <div className="container">
             <p className="title"><i className="fas fa-coffee"></i>REVIEW & BLOG</p>
             <h1>REVIEW & BLOG</h1>
-            <img className="s-img" src="/assets/Separador_popu.png" />
+
 
             <div className="boxs" key={rv.id}>
                 {
