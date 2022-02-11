@@ -1,9 +1,9 @@
 import Footer from "../contents/footer"
 import '../css/review.css'
 import rvData from '../data/review.js'
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import {Link} from 'react-router-dom'
-import Menu from "../contents/menu"
+
 
 function Review() {
 
