@@ -6,6 +6,7 @@ import 'aos/dist/aos.css'
 import Amplify from '../js/amplify'
 import course from '../data/course'
 import imgLink from '../data/imgLink'
+import Menu from "../contents/menu"
 
 
 function Travel() {
@@ -22,6 +23,8 @@ let [imgs, setImgs] = useState(imgLink)
 
 return(
 <>
+
+	<Menu></Menu>
 	<div id="bg" style={{backgroundImage:"url('/assets/bg-blog-image.jpg')"}}>
 
 		{/* Main-img & Title*/}

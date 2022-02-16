@@ -3,10 +3,13 @@ import '../css/travel.css'
 import '../css/review.css'
 import '../css/accommodation.css'
 import React from "react"
-import {Link, Route, Switch} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
-function Menu() {
+function Menu(props) {
+  
+  const {handleLogout} = props
+
    return (
         <header>
     <div className="inner">
@@ -17,8 +20,8 @@ function Menu() {
 
       <div className="sub-menu">
         <ul className="menu">
-          <li>
-            <Link to="/signin">Sign In</Link>
+          <li onClick={handleLogout}>
+            <Link to="">Log-out</Link>
           </li>
           <li>
             <Link to="">My Blog</Link>

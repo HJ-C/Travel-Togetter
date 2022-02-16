@@ -7,6 +7,7 @@ import Footer from "../contents/footer"
 import hotelPrice from "../data/hotelPrice"
 import resortPrice from "../data/resortPrice"
 import explore from "../data/explore"
+import Menu from "../contents/menu"
 
 
 function Accommodation() {
@@ -27,6 +28,8 @@ let [review, setReview] = useState(explore)
 
 return (
 <>
+	<Menu></Menu>
+	
 	{/* Background */}
 	<div className="bg" style={ {backgroundImage:'url(/assets/accommodation/bg-img.jpg)'} }>
 		

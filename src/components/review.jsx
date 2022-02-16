@@ -3,6 +3,7 @@ import '../css/review.css'
 import rvData from '../data/review.js'
 import { useState } from "react"
 import {Link} from 'react-router-dom'
+import Menu from "../contents/menu"
 
 
 function Review() {
@@ -12,6 +13,8 @@ let [rv, setRv] = useState(rvData)
 
 return (
 <>
+
+    <Menu></Menu>
     {/*
     <!--REVIEW & Blog--> */}
     <div className="blog" style={ {backgroundImage : 'url(/assets/bg-blog-image.jpg)' } }>

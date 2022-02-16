@@ -4,10 +4,13 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import {useEffect, useState} from 'react'
 import '../css/main.css'
+import Menu from '../contents/menu'
 
 
 
-function Main() {
+function Main(props) {
+
+const {handleLogout} = props;
 
 useEffect(() => {
 AOS.init({
@@ -19,6 +22,9 @@ duration : 1000
 
 return (
 <>
+
+<Menu handleLogout={handleLogout}></Menu>
+
   {/* Main Image */}
 
   <section className="home text-uppercase" onLoad={start}>
@@ -35,7 +41,6 @@ return (
     </div>
   </section>
   {/* Main Image end */}
-
 
 
   {/* Slide */}
@@ -55,7 +60,6 @@ return (
     </section>
   </section>
   {/* Slide end*/}
-
 
   {/* Background Img*/}
   <section>

@@ -8,7 +8,6 @@ import Menu from './contents/menu';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Menu></Menu>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
