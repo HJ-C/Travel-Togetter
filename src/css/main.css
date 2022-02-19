@@ -16,7 +16,6 @@
 /* Background */
  
   .bg-img1{
-    /* background-image: url("../images/index/bg1.jpg"); */
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed; 
@@ -25,7 +24,6 @@
   }
   
   .bg-img2{
-    /* background-image: url("../images/index/bg2.jpg"); */
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
