@@ -31,15 +31,6 @@ img {
 	transition: all 0.3s ease;
 }
 
-.bg{
-	position: relative;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-}
-
-
 /*INNER*/
 .inner {
 	width: 1100px;

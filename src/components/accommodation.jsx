@@ -31,7 +31,7 @@ return (
 	<Menu></Menu>
 	
 	{/* Background */}
-	<div className="bg" style={ {backgroundImage:'url(/assets/accommodation/bg-img.jpg)'} }>
+	<div className="bg" style={ {backgroundImage : 'url(/assets/bg-blog-image.jpg)' } }>
 		
 		{/* Price */}
 		<section className="main">
@@ -89,7 +89,7 @@ return (
 
 			<div class="items">
 			{
-								review.map( (a,i) => <Explore review={review} i={i}></Explore> )
+				review.map( (a,i) => <Explore review={review} i={i}></Explore> )
 			}
 			</div>
 		</div>

@@ -1,13 +1,22 @@
 import Footer from "../contents/footer"
 import '../css/review.css'
 import rvData from '../data/review.js'
-import { useState } from "react"
-import {Link} from 'react-router-dom'
+import { useState, useEffect } from "react"
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 import Menu from "../contents/menu"
 import axios from 'axios'
 
 
 function Review() {
+
+useEffect(() => {
+    AOS.init({
+    duration : 1000
+    });
+});
+    
 
         
 let [rv, setRv] = useState(rvData)
@@ -24,7 +33,7 @@ return (
             <h1>REVIEW & BLOG</h1>
 
 
-            <div className="boxs" key={rv.id}>
+            <div className="boxs" data-aos="zoom-in" data-aos-duration="800" key={rv.id}>
                 {
                     rv.map( (a,i) => { return <Blog rv={rv} i={i}></Blog>
                     })
@@ -59,7 +68,7 @@ return (
 
 function Blog(props) {
     return (
-        <div className="box">
+        <div className="box" data-aos="zoom-in" data-aos-duration="800">
             <div className="image">
                 <img src={"/assets/review/blog"+(props.i+1) +".jpg"} alt="" />
             </div>
