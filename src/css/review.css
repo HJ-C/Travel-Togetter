@@ -200,15 +200,12 @@ header .main-menu .item .item__name {
 
 .blog .container .title {
     text-align: center;
-
 }
 
 .blog .container h1 {
     text-align: center;
     font-size: 50px;
     padding-bottom: 40px;
-
-    
 }
 
 .blog .container .boxs {
@@ -327,7 +324,7 @@ header .main-menu .item .item__name {
     color: #C7A17A;
 }
 
-.blog .container a {
+.blog .container .more {
     display: block;
     width: fit-content;
     border: 2px solid #ccc;
@@ -346,7 +343,7 @@ header .main-menu .item .item__name {
     cursor: pointer;
 }
 
-.blog .container a:hover {
+.blog .container .more:hover {
     color: #FFF;
     background: #C7A17A;
     border-color: #C7A17A;

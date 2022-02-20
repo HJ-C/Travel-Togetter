@@ -4,6 +4,7 @@ import rvData from '../data/review.js'
 import { useState } from "react"
 import {Link} from 'react-router-dom'
 import Menu from "../contents/menu"
+import axios from 'axios'
 
 
 function Review() {
@@ -30,7 +31,17 @@ return (
                 }
             </div>
 
-            <Link to="#">SEE All </Link>
+            <button className="more" onClick={ ()=> {
+                axios.get('https://gist.githubusercontent.com/HJ-C/65887cdd438b86906665679c922d4126/raw/b2d138afc7004e4228fa901da27556e3e9e1a391/gistfile1.txt')
+                .then( (res)=> {
+                    console.log(res.data)
+                    setRv( [...rv, ...res.data] )
+                })
+                .catch(()=> {
+                    console.log('실패')
+                })
+            }}>See All</button>
+            
         </div>
 
 

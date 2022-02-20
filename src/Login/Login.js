@@ -41,13 +41,13 @@ const Login = (props)=> {
                     {hasAccount 
                     ? ( 
                         <>
-                        <button onClick={handleLogin}>Sign in</button>
+                        <button className="loginBtn" onClick={handleLogin}>Sign in</button>
                         <p>로그인하기
                         <span onClick={()=> setHasAccount(!hasAccount)}>Sign up</span></p>
                         </>
                     ) : (
                         <>
-                        <button onClick={handleSignUp}>Sign up</button>
+                        <button className="loginBtn" onClick={handleSignUp}>Sign up</button>
                         <p>회원가입 
                         <span onClick={()=> setHasAccount(!hasAccount)}>Sign in</span></p>
                         </>
