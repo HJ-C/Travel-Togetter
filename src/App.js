@@ -1,13 +1,15 @@
 import React from 'react'
 import Main from './components/main';
 import Review from './components/review';
-import {Route, Switch} from 'react-router-dom'
+import ViewMore from './components/viewMore';
 import Accommodation from './components/accommodation';
 import Travel from './components/travel';
-import fire from './firebase'
 import Login from './Login/Login';
+import {Route, Switch} from 'react-router-dom'
+import {fire} from './firebase'
 import { useEffect, useState } from 'react';
 import './App.css'
+
 
 function App() {
 
@@ -117,6 +119,9 @@ function App() {
         </Route>
         <Route path="/travel">
           <Travel></Travel>
+        </Route>
+        <Route path="/moretitle">
+          <ViewMore></ViewMore>
         </Route>
         <Route path='/:id'> 
           <div>잘못된 주소입니다.</div>

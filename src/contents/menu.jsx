@@ -1,7 +1,3 @@
-import '../css/main.css'
-import '../css/travel.css'
-import '../css/review.css'
-import '../css/accommodation.css'
 import React from "react"
 import {Link} from 'react-router-dom'
 
@@ -56,7 +52,9 @@ function Menu(props) {
           </Link>
         </li>
         <li className="item">
-          <div className="item__name">소개</div>
+           <Link to="./moretitle">
+              <div className="item__name">더 보기</div>
+            </Link>
         </li>
       </ul>
 
