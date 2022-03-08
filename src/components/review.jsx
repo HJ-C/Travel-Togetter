@@ -4,7 +4,6 @@ import rvData from '../data/review.js'
 import { useState, useEffect } from "react"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-
 import Menu from "../contents/menu"
 import axios from 'axios'
 

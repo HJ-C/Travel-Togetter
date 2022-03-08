@@ -1,9 +1,8 @@
 import React from "react";
 import UploadForm from "../js/UploadForm";
 import ImageGrid from "../js/ImageGrid";
-import Modal from "../js/Modal";
-import MoreTitle from "../js/moreTitle";
 import { useState } from "react";
+import '../css/viewMore.css'
 
 function ViewMore() {
     const [selectedImg, setSelectedImg] = useState(null);
@@ -22,4 +21,31 @@ function ViewMore() {
     );
   }
 
-  export default ViewMore
+function MoreTitle() {
+    return (
+        <div className="title">
+          <h1>FireGram</h1>
+          <h2>Your Pictures</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      )
+}
+
+function Modal({ setSelectedImg, selectedImg }){
+
+    const handleClick = (e) => {
+      if (e.target.classList.contains('backdrop')) {
+        setSelectedImg(null);
+      }
+    }
+  
+    return (
+      <div className='backdrop' onClick={handleClick}>
+        <img src={selectedImg} alt='pic'></img>  
+      </div>
+    )
+}
+
+
+
+export default ViewMore
