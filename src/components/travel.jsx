@@ -1,4 +1,4 @@
-import '../css/travel.css'
+import '../css/Travel.css'
 import Footer from '../contents/footer'
 import { useEffect, useState } from 'react'
 import AOS from 'aos'

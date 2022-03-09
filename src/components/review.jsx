@@ -1,5 +1,5 @@
 import Footer from "../contents/footer"
-import '../css/review.css'
+import '../css/Review.css'
 import rvData from '../data/review.js'
 import { useState, useEffect } from "react"
 import AOS from 'aos'

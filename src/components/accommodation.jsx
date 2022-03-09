@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import '../css/accommodation.css'
+import '../css/Accommodation.css'
 import Taps from "../js/taps"
 import AOS from 'aos'
 import 'aos/dist/aos.css'

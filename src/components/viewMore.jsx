@@ -2,7 +2,7 @@ import React from "react";
 import UploadForm from "../js/UploadForm";
 import ImageGrid from "../js/ImageGrid";
 import { useState } from "react";
-import '../css/viewMore.css'
+import '../css/ViewMore.css'
 import Menu from "../contents/menu";
 import Footer from "../contents/footer";
 
