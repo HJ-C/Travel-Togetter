@@ -4,20 +4,25 @@
   --error: #ff4a4a;
 }
 
-/* base styles & title */
-body{
-  font-family: "Noto Serif";
-  color: var(--secondary);
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transition: all .4s;
 }
-.App{
-  max-width: 960px;
+
+.view{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.view_wrap{
+  max-width: 1120px;
   margin: 0 auto;
-}
-.title h1{
-  color: var(--primary);
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  font-weight: normal;
+  padding-top: 150px;
 }
 .title h2, .title p{
   text-align: center;
@@ -71,10 +76,10 @@ label:hover{
 
 /* image grid styles */
 .img-grid{
-  margin: 20px auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+  box-shadow:
 }
 .img-wrap{
   overflow: hidden;
@@ -89,7 +94,7 @@ label:hover{
   max-width: 150%;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -70px;
 }
 
 /* modal styles */

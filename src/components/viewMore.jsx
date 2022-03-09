@@ -3,19 +3,25 @@ import UploadForm from "../js/UploadForm";
 import ImageGrid from "../js/ImageGrid";
 import { useState } from "react";
 import '../css/viewMore.css'
+import Menu from "../contents/menu";
+import Footer from "../contents/footer";
 
 function ViewMore() {
     const [selectedImg, setSelectedImg] = useState(null);
-  
+
+    
     return (
-      
-      <div className="App">
+      <div className="view">
+        <Menu></Menu>
+        <div className="view_wrap"> 
         <MoreTitle></MoreTitle>
         <UploadForm />
         <ImageGrid setSelectedImg={setSelectedImg} />
         { selectedImg &&
           <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
         }
+        <Footer></Footer>
+        </div>
       </div>
   
     );
@@ -24,9 +30,8 @@ function ViewMore() {
 function MoreTitle() {
     return (
         <div className="title">
-          <h1>FireGram</h1>
           <h2>Your Pictures</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>If you have a photo you want to leave, please register it here.</p>
         </div>
       )
 }
