@@ -6,7 +6,7 @@ import Accommodation from './components/accommodation';
 import Travel from './components/travel';
 import Login from './Login/Login';
 import {Route, Switch} from 'react-router-dom'
-import {fire} from './firebase'
+import {fire} from './Firebase'
 import { useEffect, useState } from 'react';
 import './App.css'
 
