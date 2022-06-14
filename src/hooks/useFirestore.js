@@ -1,25 +1,25 @@
-import { useState, useEffect } from 'react';
-import { projectFirestore } from '../Firebase';
+// import { useState, useEffect } from 'react';
+// import { projectFirestore } from '../Firebase';
 
-const useFirestore = (collection) => {
-  const [docs, setDocs] = useState([]);
+// const useFirestore = (collection) => {
+//   const [docs, setDocs] = useState([]);
 
-  useEffect(() => {
-    const unsub = projectFirestore.collection(collection)
-      .orderBy('createdAt', 'desc')
-      .onSnapshot(snap => {
-        let documents = [];
-        snap.forEach(doc => {
-          documents.push({...doc.data(), id: doc.id});
-        });
-        setDocs(documents);
-      });
+//   useEffect(() => {
+//     const unsub = projectFirestore.collection(collection)
+//       .orderBy('createdAt', 'desc')
+//       .onSnapshot(snap => {
+//         let documents = [];
+//         snap.forEach(doc => {
+//           documents.push({...doc.data(), id: doc.id});
+//         });
+//         setDocs(documents);
+//       });
 
-    return () => unsub();
+//     return () => unsub();
 
-  }, [collection]);
+//   }, [collection]);
 
-  return { docs };
-}
+//   return { docs };
+// }
 
-export default useFirestore;
+// export default useFirestore;

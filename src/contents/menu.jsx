@@ -1,15 +1,16 @@
 import React from "react"
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 
 function Menu(props) {
   
   const {handleLogout} = props
+  let navigate = useNavigate()
+  
 
    return (
-        <header>
-    <div className="inner">
-
+    <header>
+      <div className="inner">
       <a href="/" className="logo">
         <img src="./assets/main/logo.png" alt="Trip" />
       </a>

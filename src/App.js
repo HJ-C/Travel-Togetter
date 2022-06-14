@@ -5,7 +5,7 @@ import ViewMore from './components/viewMore';
 import Accommodation from './components/accommodation';
 import Travel from './components/travel';
 import Login from './Login/Login';
-import {Route, Switch} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 import {fire} from './Firebase'
 import { useEffect, useState } from 'react';
 import './App.css'
@@ -20,76 +20,75 @@ function App() {
   const [passwordError, setPasswordError] = useState('')
   const [hasAccount, setHasAccount] = useState(false)
 
-
   
-  const clearInputs = ()=> {
-    setEmail("")
-    setPassword("")
-  }
+  // const clearInputs = ()=> {
+  //   setEmail("")
+  //   setPassword("")
+  // }
 
-  const clearErrors = ()=> {
-    setEmailError("")
-    setPasswordError("")
-  }
+  // const clearErrors = ()=> {
+  //   setEmailError("")
+  //   setPasswordError("")
+  // }
 
-  const handleLogin = () => {
-    clearErrors()
-    fire
-      .auth()
-      .signINWithEmailAndPassword(email,password)
-      .catch((err) => {
-          switch(err.code){
-            case "auth/invalid-email":
-            case "auth/user-disabled":
-            case "auth/user-not-found":
-                setEmailError(err.message);
-                break;
-            case "auth/wrong-password":
-                setPasswordError(err.message);
-                break;
-        }
-      })
-  }
+  // const handleLogin = () => {
+  //   clearErrors()
+  //   fire
+  //     .auth()
+  //     .signINWithEmailAndPassword(email,password)
+  //     .catch((err) => {
+  //         switch(err.code){
+  //           case "auth/invalid-email":
+  //           case "auth/user-disabled":
+  //           case "auth/user-not-found":
+  //               setEmailError(err.message);
+  //               break;
+  //           case "auth/wrong-password":
+  //               setPasswordError(err.message);
+  //               break;
+  //       }
+  //     })
+  // }
 
-  const handleSignUp = () => {
-    fire
-    .auth()
-    .createUserWithEmailAndPassword(email,password)
-    .catch((err) => {
-        switch(err.code){
-          case "auth/email-already-in-use":
-          case "auth/invalid-email":
-              setEmailError(err.message);
-              break;
-          case "auth/weak-password":
-              setPasswordError(err.message);
-              break;
-      }
-    })
-  }
+  // const handleSignUp = () => {
+  //   fire
+  //   .auth()
+  //   .createUserWithEmailAndPassword(email,password)
+  //   .catch((err) => {
+  //       switch(err.code){
+  //         case "auth/email-already-in-use":
+  //         case "auth/invalid-email":
+  //             setEmailError(err.message);
+  //             break;
+  //         case "auth/weak-password":
+  //             setPasswordError(err.message);
+  //             break;
+  //     }
+  //   })
+  // }
 
-  const handleLogout = () => {
-    fire.auth().signOut()
-  }
+  // const handleLogout = () => {
+  //   fire.auth().signOut()
+  // }
 
-  const authListener = () => {
-    fire.auth().onAuthStateChanged(user => {
-      if(user){
-        clearInputs()
-        setUser(user)
-      }else {
-        setUser("")
-      }
-    })
-  }
+  // const authListener = () => {
+  //   fire.auth().onAuthStateChanged(user => {
+  //     if(user){
+  //       clearInputs()
+  //       setUser(user)
+  //     }else {
+  //       setUser("")
+  //     }
+  //   })
+  // }
 
-  useEffect( ()=> {
-    authListener()
-  },[])
+  // useEffect( ()=> {
+  //   authListener()
+  // },[])
 
   return (
     <div className="App">
-      {user ? (
+      {/* {user ? (
             <Route exact path='/'>
               <Main handleLogout={handleLogout}></Main>
             </Route>
@@ -107,27 +106,17 @@ function App() {
         passwordError={passwordError}
         >
         </Login>
-      )}
+      )} */}
 
 
-      <Switch>
-        <Route path="/review">
-          <Review></Review>
-        </Route>
-        <Route path="/accommodation">
-          <Accommodation></Accommodation>
-        </Route>
-        <Route path="/travel">
-          <Travel></Travel>
-        </Route>
-        <Route path="/moretitle">
-          <ViewMore></ViewMore>
-        </Route>
-        <Route path='/:id'> 
-          <div>잘못된 주소입니다.</div>
-        </Route>
-
-      </Switch>
+      <Routes>
+        <Route exact path='/' element={<Main></Main>}/>
+        <Route path="/review" element={<Review></Review>}/>
+        <Route path="/accommodation" element={<Accommodation></Accommodation>}/>
+        <Route path="/travel" element={<Travel></Travel>}/>
+        <Route path="/moretitle" element={<ViewMore></ViewMore>}/>
+        <Route path='/:id' element={<div>잘못된 주소입니다.</div>}/> 
+      </Routes>
     </div>
   );
 }
