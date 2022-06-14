@@ -1,11 +1,10 @@
 import React from "react"
-import {Link, useNavigate} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 function Menu(props) {
   
   const {handleLogout} = props
-  let navigate = useNavigate()
   
 
    return (
@@ -38,7 +37,7 @@ function Menu(props) {
 
       <ul className="main-menu">
         <li className="item">
-          <Link to="./accommodation">
+          <Link to="/accommodation">
             <div className="item__name">숙소</div>
           </Link>
         </li>
@@ -48,12 +47,12 @@ function Menu(props) {
           </Link>
         </li>
         <li className="item">
-          <Link to="./travel">
+          <Link to="/travel">
             <div className="item__name">여행</div>
           </Link>
         </li>
         <li className="item">
-           <Link to="./moretitle">
+           <Link to="/moretitle">
               <div className="item__name">더 보기</div>
             </Link>
         </li>
