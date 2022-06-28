@@ -21,6 +21,7 @@ function App() {
   const [hasAccount, setHasAccount] = useState(false)
 
   
+  
   // const clearInputs = ()=> {
   //   setEmail("")
   //   setPassword("")
@@ -88,6 +89,8 @@ function App() {
 
   return (
     <div className="App">
+          <div className="App">
+    </div>
       {/* {user ? (
             <Route exact path='/'>
               <Main handleLogout={handleLogout}></Main>
