@@ -3,18 +3,16 @@
   --secondary: #4e4e4e;
   --error: #ff4a4a;
 }
-
+/*초기화*/
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
-  list-style: none;
+  padding: 0;
+  box-sizing: border-box;
   transition: all .4s;
+  list-style: none;
+  font-family: Arial, sans-serif;
 }
-
 .view{
-    padding-left: 15px;
-    padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
     position: relative;

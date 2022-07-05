@@ -78,16 +78,16 @@ return (
 
 	{/* <!-- items --> */}
 
-<div class="sub-title1">
-	<div class="text">
+<div className="sub-title1">
+	<div className="text">
 		<h2>REVIEW</h2>
 	</div>
 </div>
-<section class="item-section">
-	<div class="product">
-		<div class="items__list">
+<section className="item-section">
+	<div className="product">
+		<div className="items__list">
 
-			<div class="items">
+			<div className="items">
 			{
 				review.map( (a,i) => <Explore review={review} i={i}></Explore> )
 			}
@@ -105,13 +105,13 @@ return (
 
 function Hotel(props) {
 return (
-<div class="item">
-	<div class="title sub">
+<div className="item">
+	<div className="title sub">
 		<h3>{props.room[props.i].title}</h3>
 		<p>{props.room[props.i].text}</p>
 	</div>
-	<div class="price">
-		<p class="precio">{props.room[props.i].price}</p>
+	<div className="price">
+		<p className="precio">{props.room[props.i].price}</p>
 	</div>
 </div>
 )
@@ -119,13 +119,13 @@ return (
 
 function Resort(props) {
 return (
-<div class="item">
-	<div class="title sub">
+<div className="item">
+	<div className="title sub">
 		<h3>{props.room1[props.i].title}</h3>
 		<p>{props.room1[props.i].text}</p>
 	</div>
-	<div class="price">
-		<p class="precio">{props.room1[props.i].price}</p>
+	<div className="price">
+		<p className="precio">{props.room1[props.i].price}</p>
 	</div>
 </div>
 )
@@ -133,11 +133,11 @@ return (
 
 function Explore(props) {
 	return (
-		<div class="item" data-aos="zoom-in" data-aos-duration="800">
-		<div class="item-img">
+		<div className="item" data-aos="zoom-in" data-aos-duration="800">
+		<div className="item-img">
 			<img src={"/assets/accommodation/rv-" + (props.i+1) +".jpg"}/>
 		</div>
-		<div class="item-text">
+		<div className="item-text">
 			<h3>{props.review[props.i].title}</h3>
 			<p>{props.review[props.i].text}</p>
 		</div>
