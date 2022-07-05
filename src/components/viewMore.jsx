@@ -11,7 +11,7 @@ function ViewMore() {
 
     
     return (
-      <div className="view">
+      <div className="view"  style={ {backgroundImage : 'url(/assets/bg-blog-image.jpg)' } }>
         <Menu></Menu>
         <div className="view_wrap"> 
         <MoreTitle></MoreTitle>
