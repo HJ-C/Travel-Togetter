@@ -15,6 +15,7 @@ const {handleLogout} = props;
 useEffect(() => {
 AOS.init({
 duration : 1000
+
 });
 });
 
